@@ -1,0 +1,26 @@
+base_url = "https://urielml.com"
+title = "Uriel Martínez León"
+description = "PhD student at NYU Center for Data Science"
+compile_sass = true
+build_search_index = false
+generate_feeds = false
+theme = "terminimal"
+
+[markdown]
+
+[extra]
+author = "Uriel Martínez León"
+
+accent_color = "green"
+background_color = "dark"
+
+logo_text = "UML"
+
+menu_items = [
+    {name = "home",         url = "$BASE_URL"},
+    {name = "publications", url = "$BASE_URL/publications"},
+]
+
+enable_post_view_navigation = false
+page_titles = "combined"
+copyright_html = "© Uriel Martínez León"

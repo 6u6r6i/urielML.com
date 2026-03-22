@@ -1,0 +1,160 @@
+// ── Typography ───────────────────────────────────────────────────────────────
+
+$exo2: 'Exo 2', system-ui, sans-serif;
+
+body {
+    font-family: $exo2;
+    font-size: 1rem;
+    letter-spacing: 0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $exo2;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+code, pre, pre code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+}
+
+.logo {
+    font-family: $exo2;
+    font-weight: 900;
+    font-size: 1.4rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #cc1100 !important;   // Ferrari red
+    text-shadow:
+        1px 1px 0 #000,
+        2px 2px 0 rgba(0, 0, 0, 0.18);
+}
+
+.menu {
+    font-family: $exo2;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+
+// ── Palette: creamy poetry-book yellow → warm white ──────────────────────────
+
+html { min-height: 100%; }
+
+body {
+    background: linear-gradient(
+        160deg,
+        #fdf6dc 0%,     // warm parchment yellow
+        #fefaf0 55%,    // pale cream
+        #fffefb 100%    // barely-there warm white
+    ) fixed;
+    background-color: #fdf6dc;
+
+    --color:      #1a1714;   // warm near-black for text
+    --background: transparent;
+    --accent:     #c8a84b;   // muted gold for theme accents/borders
+
+    min-height: 100vh;
+    color: #1a1714;
+}
+
+.container { background: transparent; }
+
+
+// ── Header: no box, no lines, no backdrop ────────────────────────────────────
+
+.header {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+// This is the dotted repeating-gradient line that runs beside the logo
+.header__logo::after {
+    display: none !important;
+}
+
+.footer {
+    background: transparent !important;
+    border: none !important;
+}
+
+// ── Logo: kill the accent-coloured box ───────────────────────────────────────
+
+.logo {
+    background: none !important;
+    padding: 0 !important;
+    color: #cc1100 !important;   // Ferrari red
+}
+
+
+// ── Links ────────────────────────────────────────────────────────────────────
+
+a {
+    color: #7a5c00;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    &:hover { opacity: 0.75; }
+}
+
+// Inline content link colours
+a.link-nyu  { color: #57068c; }   // NYU purple
+a.link-jnw  { color: #2e7d45; }   // green
+a.link-bio  { color: #c0547a; }   // pink
+
+// Nav menu: home (1st) and publications (2nd) in blue
+.menu__inner li:nth-child(1) a,
+.menu__inner li:nth-child(2) a {
+    color: #1a5fa0;
+}
+
+.menu a { text-decoration: none; }
+.menu .active { border-bottom: 2px solid currentColor; }
+
+
+// ── Home page layout: photo left, text right ─────────────────────────────────
+
+.home-layout {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.home-photo {
+    flex: 0 0 200px;
+
+    img {
+        width: 200px;
+        height: 260px;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+    }
+
+    .photo-caption {
+        font-size: 0.72rem;
+        color: #7a6a50;
+        margin-top: 6px;
+        line-height: 1.3;
+        font-style: italic;
+        text-transform: none;
+        letter-spacing: 0;
+    }
+}
+
+.home-text {
+    flex: 1;
+    min-width: 0;
+
+    // Align the name with the top edge of the photo
+    h1:first-child { margin-top: 0; }
+}
+
+@media (max-width: 600px) {
+    .home-layout { flex-direction: column; }
+    .home-photo img { width: 100%; height: 220px; }
+}
