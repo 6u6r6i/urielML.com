@@ -20,6 +20,15 @@ menu_items = [
     {name = "publications", url = "$BASE_URL/publications"},
 ]
 
+favicon = "/favicon.svg"
+favicon_mimetype = "image/svg+xml"
+
+default_og_image = "og_image.jpeg"
+
+# GoatCounter analytics — fill in your site code after signing up at goatcounter.com
+# e.g. if your URL is urielml.goatcounter.com, set this to "urielml"
+goatcounter_code = ""
+
 enable_post_view_navigation = false
 page_titles = "combined"
 copyright_html = "© Uriel Martínez León"
