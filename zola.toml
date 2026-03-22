@@ -27,7 +27,7 @@ default_og_image = "og_image.jpeg"
 
 # GoatCounter analytics — fill in your site code after signing up at goatcounter.com
 # e.g. if your URL is urielml.goatcounter.com, set this to "urielml"
-goatcounter_code = ""
+goatcounter_code = "urielml"
 
 enable_post_view_navigation = false
 page_titles = "combined"
