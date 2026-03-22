@@ -1,11 +1,27 @@
-Uriel Martínez León
-PhD Student, NYU Center for Data Science
-Advisor: Jonathan Niles-Weed
+Uriel Martínez León is a PhD student at the Center for Data Science of New York University. He studied the master of Mathematics at Universidad Nacional Autónoma de México and holds a Bachelor's degree in Applied Mathematics from Instituto Tecnológico Autónomo de México.
+Some of his favorite movies are "Y tu mamá también", "Güeros", and "Fanny and Alexander". 
+He was born and raised in Coyoacán, Mexico City. 
 
-[Born and raised in ___. Brief sentence on your background before graduate school.]
-
-[One or two sentences on your undergraduate/prior training — e.g., where you studied, what drew you to mathematics or data science.]
-
-[Optional: one sentence on something outside academia — a hobby, a place, a practice.]
-
-uriel.leon@nyu.edu
+	   -------------------------------------------------------------.
+     	  /                                                               \
+    	 /       Azcapotzalco             Gustavo A. Madero (La Villa)     \
+   	|             |                            _|_                     |
+   	|             |                           /   \          Airport   |
+   	|    Polanco  |                          |Zócalo|         (MEX)    |
+   	|       * |                           \___/            _/_         |
+   	|             +--[Paseo de la Reforma]-----===--------------/      |
+   	|  Santa Fe   |                             |                      |
+   	|     * [Chapultepec]        Roma/     |      Venustiano           |
+   	|                Park            Condesa    |       Carranza       |
+   	|              		             * |                           |
+   	|                 |                         |                      |
+   	|                 |              Coyoacán   |       Iztapalapa     |
+   	|   Cuajimalpa    |                 * |           *                |
+   	|                 |               UNAM      |                      |
+   	|                  \                        |       Xochimilco     |
+   	|                   \                       |        [≈≈≈≈≈≈]      |
+    	\        Ajusco     \                      |        (Canals)      /
+    	 \        ^ ^        \___               ___|                     /
+      	  \        ^             \_____________/        Tlalpan         /
+       	   \                                                           /
+            '---------------------------------------------------------'
