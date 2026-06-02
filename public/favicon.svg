@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 40">
+  <defs>
+    <filter id="s" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="1.5" dy="1.5" stdDeviation="0.4"
+                    flood-color="#000000" flood-opacity="0.30"/>
+    </filter>
+  </defs>
+  <text x="1" y="34"
+        font-family="'Arial Black', Arial, sans-serif"
+        font-weight="900"
+        font-size="36"
+        letter-spacing="1"
+        fill="#cc1100"
+        filter="url(#s)">UML</text>
+</svg>

@@ -101,9 +101,10 @@ a {
 }
 
 // Inline content link colours
-a.link-nyu  { color: #57068c; }   // NYU purple
-a.link-jnw  { color: #2e7d45; }   // green
-a.link-bio  { color: #c0547a; }   // pink
+a.link-nyu   { color: #57068c; }   // NYU purple
+a.link-jnw   { color: #2e7d45; }   // green
+a.link-bio   { color: #c0547a; }   // pink
+a.link-arxiv { color: #2e7d45; }   // green
 
 // Nav menu: home (1st) and publications (2nd) in blue
 .menu__inner li:nth-child(1) a,
@@ -126,6 +127,8 @@ a.link-bio  { color: #c0547a; }   // pink
 
 .home-photo {
     flex: 0 0 200px;
+    overflow: hidden;
+    isolation: isolate;
 
     img {
         width: 200px;
@@ -133,6 +136,8 @@ a.link-bio  { color: #c0547a; }   // pink
         object-fit: cover;
         object-position: center top;
         display: block;
+        transform: translateZ(0);
+        image-rendering: auto;
     }
 
     .photo-caption {

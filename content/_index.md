@@ -10,4 +10,4 @@ I'm interested in the mathematics and methodology of statistics and artificial i
 
 <a href="/bio.txt" class="link-bio">A brief bio.</a>
 
-For any academic inquiries, please reach me at [my_name].[my_second_last_name][at]][nyu].[edu]
+For any academic inquiries, please reach me at [my_name].[my_second_last_name][at][nyu].[edu]
