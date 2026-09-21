@@ -30,6 +30,33 @@ code, pre, pre code {
     text-shadow:
         1px 1px 0 #000,
         2px 2px 0 rgba(0, 0, 0, 0.18);
+
+    // Pinned so every face below occupies the same line box (1.4rem x the 1.54
+    // body line-height = today's height). Without this the header height — and
+    // everything under it — would shift between reloads.
+    line-height: 2.16rem;
+}
+
+// ── Logo font roulette ───────────────────────────────────────────────────────
+// A <head> script stamps html[data-logofont] on each load. Only the typeface
+// changes: colour and text-shadow above are inherited untouched. Each face gets
+// its own size/weight/tracking because they set very differently at one size.
+
+$gothic: 'UnifrakturMaguntia', 'Luminari', serif;
+$comic:  'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive;
+
+html[data-logofont="gothic"] .logo {
+    font-family: $gothic;
+    font-weight: 400;        // blackletter ships a single weight
+    font-size: 1.9rem;       // ornate caps read small, so size up to match
+    letter-spacing: 0.02em;  // the face is already wide; tracking pulls it apart
+}
+
+html[data-logofont="comic"] .logo {
+    font-family: $comic;
+    font-weight: 700;        // Comic Sans has no 900
+    font-size: 1.5rem;
+    letter-spacing: 0.06em;
 }
 
 .menu {
@@ -163,3 +190,7 @@ a.link-arxiv { color: #2e7d45; }   // green
     .home-layout { flex-direction: column; }
     .home-photo img { width: 100%; height: 220px; }
 }
+
+// The period after "A brief bio" is its own link — a random Nicanor Parra poem.
+// Same pink as the bio link so the sentence still reads as one phrase.
+a.link-poem { color: #c0547a; }

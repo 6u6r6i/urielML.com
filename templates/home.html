@@ -10,4 +10,8 @@
         {{ section.content | safe }}
     </div>
 </div>
+
+{# Rotates the period after "A brief bio" through the Parra anthology. Home page
+   only, and deferred: the anchor already carries a working poem in its href. #}
+<script defer src="{{ get_url(path="poems.js", trailing_slash=false) | safe }}"></script>
 {% endblock content %}

@@ -10,7 +10,18 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=UnifrakturMaguntia&family=Comic+Neue:wght@700&display=swap">
+
+    
+    <script>
+        (function () {
+            var faces = ["exo", "gothic", "comic"];
+            document.documentElement.setAttribute(
+                "data-logofont",
+                faces[Math.floor(Math.random() * faces.length)]
+            );
+        })();
+    </script>
 
     <link rel="stylesheet" href="https://urielml.com/style.css">
     <link rel="stylesheet" href="https://urielml.com/custom.css">

@@ -10,7 +10,18 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=UnifrakturMaguntia&family=Comic+Neue:wght@700&display=swap">
+
+    
+    <script>
+        (function () {
+            var faces = ["exo", "gothic", "comic"];
+            document.documentElement.setAttribute(
+                "data-logofont",
+                faces[Math.floor(Math.random() * faces.length)]
+            );
+        })();
+    </script>
 
     <link rel="stylesheet" href="https://urielml.com/style.css">
     <link rel="stylesheet" href="https://urielml.com/custom.css">
@@ -83,12 +94,15 @@
     <div class="home-text">
         <h1 id="uriel-martinez-leon">Uriel Martínez León</h1>
 <p>Hello there! I'm a PhD student at <a href="https://cds.nyu.edu" class="link-nyu">NYU's CDS</a> working with <a href="https://www.jonathannilesweed.com" class="link-jnw">Jonathan Niles-Weed</a>.</p>
-<p>I'm interested in the mathematics and methodology of statistics and artificial intelligence. The main tools I use are optimal transport and Riemannian geometry. I'm currently thinking about statistical models and regression with probability measure data.</p>
-<p><a href="/bio.txt" class="link-bio">A brief bio.</a></p>
+<p>I'm interested in the mathematics and methodology of statistics and science. The main tools I use are optimal transport and Riemannian geometry. I'm currently thinking about statistical models and regression with probability measure data.</p>
+<p><a href="/bio.txt" class="link-bio">A brief bio</a><a href="https://www.nicanorparra.uchile.cl/antologia/poemasyantipoemas/epitafio.html" id="poem-dot" class="link-poem" target="_blank" rel="noopener noreferrer" title="A poem by Nicanor Parra">.</a></p>
 <p>For any academic inquiries, please reach me at [my_name].[my_second_last_name][at][nyu].[edu]</p>
 
     </div>
 </div>
+
+
+<script defer src="https://urielml.com/poems.js"></script>
 
     </div>
 
