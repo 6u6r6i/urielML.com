@@ -107,6 +107,14 @@ body {
 .footer {
     background: transparent !important;
     border: none !important;
+
+    // Theme ships the byline at 1rem, as large as body copy. Dial it back so it
+    // sits quietly at the foot of the page. (custom.css loads after the theme's
+    // style.css, so this wins at equal specificity without !important.)
+    .copyright {
+        font-size: 0.75rem;
+        letter-spacing: 0.02em;
+    }
 }
 
 // ── Logo: kill the accent-coloured box ───────────────────────────────────────
