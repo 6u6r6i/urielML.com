@@ -21,9 +21,14 @@ code, pre, pre code {
 }
 
 .logo {
+    // Size and line box go through custom properties so the mobile breakpoint can
+    // scale all three faces with two declarations instead of repeating each rule.
+    --logo-size: 1.4rem;
+    --logo-line: 2.16rem;
+
     font-family: $exo2;
     font-weight: 900;
-    font-size: 1.4rem;
+    font-size: var(--logo-size);
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: #cc1100 !important;   // Ferrari red
@@ -31,10 +36,10 @@ code, pre, pre code {
         1px 1px 0 #000,
         2px 2px 0 rgba(0, 0, 0, 0.18);
 
-    // Pinned so every face below occupies the same line box (1.4rem x the 1.54
-    // body line-height = today's height). Without this the header height — and
-    // everything under it — would shift between reloads.
-    line-height: 2.16rem;
+    // Pinned so every face occupies the same line box (1.4rem x the 1.54 body
+    // line-height). Without this the header height — and everything under it —
+    // would shift between reloads as the face changes.
+    line-height: var(--logo-line);
 }
 
 // ── Logo font roulette ───────────────────────────────────────────────────────
@@ -48,14 +53,14 @@ $comic:  'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive;
 html[data-logofont="gothic"] .logo {
     font-family: $gothic;
     font-weight: 400;        // blackletter ships a single weight
-    font-size: 1.9rem;       // ornate caps read small, so size up to match
+    --logo-size: 1.9rem;     // ornate caps read small, so size up to match
     letter-spacing: 0.02em;  // the face is already wide; tracking pulls it apart
 }
 
 html[data-logofont="comic"] .logo {
     font-family: $comic;
     font-weight: 700;        // Comic Sans has no 900
-    font-size: 1.5rem;
+    --logo-size: 1.5rem;
     letter-spacing: 0.06em;
 }
 
@@ -221,9 +226,34 @@ a.link-arxiv { color: #2e7d45; }   // green
 }
 
 @media (max-width: 600px) {
-    .home-layout { flex-direction: column; }
-    // Sizes the frame, not the images: they are absolutely positioned now.
-    .home-photo .photo-swap { width: 100%; height: 220px; }
+    .home-layout {
+        flex-direction: column;
+        gap: 1.5rem;   // 2.5rem reads as a gulf once the columns stack
+    }
+
+    .home-photo {
+        // In a column container `flex` sets the HEIGHT, so the desktop
+        // `0 0 200px` would pin this box at 200px while its contents need ~350px.
+        flex: 0 0 auto;
+        align-self: center;
+    }
+
+    // Sizes the frame, not the images: they are absolutely positioned now. Kept
+    // at the desktop 200:260 proportion so both photos crop exactly as they do
+    // on wide screens, just a little larger now that they have the width.
+    .home-photo .photo-swap { width: 240px; height: 312px; }
+
+    .home-photo .photo-caption { text-align: center; }
+
+    // Body copy stays left-aligned — only the photo and its caption centre.
+    .home-text { width: 100%; }
+
+    .logo {
+        --logo-size: 1.75rem;
+        --logo-line: 2.7rem;
+    }
+    html[data-logofont="gothic"] .logo { --logo-size: 2.35rem; }
+    html[data-logofont="comic"]  .logo { --logo-size: 1.85rem; }
 }
 
 // The period after "A brief bio" is its own link — a random Nicanor Parra poem.
