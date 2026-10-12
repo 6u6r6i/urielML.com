@@ -3,7 +3,13 @@
 {% block content %}
 <div class="home-layout">
     <div class="home-photo">
-        <img src="/photo.jpg" alt="Uriel Martínez León" />
+        {# Two stacked frames: the second fades in over the first on hover. It is
+           the same person in the same room, so it carries no alt text of its own
+           and is hidden from screen readers. #}
+        <div class="photo-swap">
+            <img src="/photo.jpg" alt="Uriel Martínez León" />
+            <img class="photo-swap__alt" src="/photo-hover.jpg" alt="" aria-hidden="true" />
+        </div>
         <p class="photo-caption">Me at the Morgan Library in New York.</p>
     </div>
     <div class="home-text">

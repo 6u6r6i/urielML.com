@@ -162,17 +162,43 @@ a.link-arxiv { color: #2e7d45; }   // green
 
 .home-photo {
     flex: 0 0 200px;
-    overflow: hidden;
     isolation: isolate;
 
-    img {
+    // The frame now owns the dimensions and both photos fill it absolutely, so
+    // the two are pixel-aligned and the surrounding layout never reflows on hover.
+    .photo-swap {
+        position: relative;
         width: 200px;
         height: 260px;
-        object-fit: cover;
-        object-position: center top;
-        display: block;
-        transform: translateZ(0);
-        image-rendering: auto;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+            transform: translateZ(0);
+            image-rendering: auto;
+        }
+
+        // Written out rather than as `&__alt`, which SCSS would expand to the
+        // whole parent chain and silently never match inside `&:hover`.
+        .photo-swap__alt {
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+
+        &:hover .photo-swap__alt,
+        &:focus-within .photo-swap__alt {
+            opacity: 1;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .photo-swap__alt { transition: none; }
+        }
     }
 
     .photo-caption {
@@ -196,7 +222,8 @@ a.link-arxiv { color: #2e7d45; }   // green
 
 @media (max-width: 600px) {
     .home-layout { flex-direction: column; }
-    .home-photo img { width: 100%; height: 220px; }
+    // Sizes the frame, not the images: they are absolutely positioned now.
+    .home-photo .photo-swap { width: 100%; height: 220px; }
 }
 
 // The period after "A brief bio" is its own link — a random Nicanor Parra poem.
